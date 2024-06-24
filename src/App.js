@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Wordle from "./components/Wordle";
 
 function App() {
   const [solution, setSolution] = useState(null);
@@ -20,7 +21,7 @@ function App() {
   return (
     <div className="App">
       <h1>Wordle Clone React App</h1>
-      {solution && <p>Solution is {solution.word}</p>}
+      {solution && <Wordle solution={solution} />}
     </div>
   );
 }
