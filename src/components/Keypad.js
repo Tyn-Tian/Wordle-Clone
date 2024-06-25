@@ -21,7 +21,6 @@ const Keypad = ({ usedKeys }) => {
       {letters &&
         letters.map((letter) => {
           const color = usedKeys[letter.key];
-          console.log(color)
           return <div className={color} key={letter.key}>{letter.key}</div>;
         })}
     </div>
