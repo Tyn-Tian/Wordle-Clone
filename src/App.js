@@ -10,7 +10,7 @@ function App() {
         const response = await fetch("http://localhost:8080/solutions");
         const data = await response.json();
         const randomSolution = data[Math.floor(Math.random() * data.length)];
-        setSolution(randomSolution);
+        setSolution(randomSolution.word);
       } catch (err) {
         console.log(err);
       }
